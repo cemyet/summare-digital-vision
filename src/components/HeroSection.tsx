@@ -12,19 +12,19 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Gradient overlay for fade effect - opaque at top, transparent at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-white/80"></div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Logo/Brand - smaller and cursive */}
-        <div className="mb-6">
-          <h1 className="text-3xl md:text-4xl font-normal text-summare-navy mb-4" style={{ fontFamily: 'Dancing Script, cursive' }}>
+        {/* Logo/Brand */}
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-6xl font-bold text-summare-navy mb-4">
             Summare
           </h1>
         </div>
 
-        {/* Main Heading - reduced size and weight */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-summare-navy leading-tight mb-6 animate-fade-in">
+        {/* Main Heading */}
+        <h2 className="text-hero mb-6 animate-fade-in">
           Digitala årsredovisningar för egenföretagare
         </h2>
 
