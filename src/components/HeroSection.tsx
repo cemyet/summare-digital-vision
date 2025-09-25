@@ -12,6 +12,48 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Watercolor animation overlay */}
+      <div className="absolute inset-0">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          {/* Watercolor splash 1 - Blue */}
+          <circle 
+            cx="20" cy="30" r="8"
+            className="watercolor-splash watercolor-blue"
+            style={{ animationDelay: '1s' }}
+          />
+          {/* Watercolor splash 2 - Pink */}
+          <ellipse 
+            cx="70" cy="20" rx="12" ry="6"
+            className="watercolor-splash watercolor-pink"
+            style={{ animationDelay: '2.5s' }}
+          />
+          {/* Watercolor splash 3 - Yellow */}
+          <circle 
+            cx="80" cy="60" r="10"
+            className="watercolor-splash watercolor-yellow"
+            style={{ animationDelay: '4s' }}
+          />
+          {/* Watercolor splash 4 - Green */}
+          <ellipse 
+            cx="15" cy="70" rx="9" ry="12"
+            className="watercolor-splash watercolor-green"
+            style={{ animationDelay: '5.5s' }}
+          />
+          {/* Watercolor splash 5 - Purple */}
+          <circle 
+            cx="45" cy="80" r="7"
+            className="watercolor-splash watercolor-purple"
+            style={{ animationDelay: '7s' }}
+          />
+          {/* Watercolor splash 6 - Orange */}
+          <ellipse 
+            cx="60" cy="40" rx="11" ry="8"
+            className="watercolor-splash watercolor-orange"
+            style={{ animationDelay: '8.5s' }}
+          />
+        </svg>
+      </div>
+      
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-white/80"></div>
       
