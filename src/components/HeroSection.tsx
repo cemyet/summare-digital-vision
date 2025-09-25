@@ -13,43 +13,54 @@ const HeroSection = () => {
       }}
     >
       {/* Watercolor animation overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           {/* Watercolor splash 1 - Blue */}
           <circle 
-            cx="20" cy="30" r="8"
+            cx="20" cy="30" r="12"
             className="watercolor-splash watercolor-blue"
-            style={{ animationDelay: '1s' }}
+            style={{ animationDelay: '0.5s' }}
           />
           {/* Watercolor splash 2 - Pink */}
           <ellipse 
-            cx="70" cy="20" rx="12" ry="6"
+            cx="70" cy="20" rx="15" ry="8"
             className="watercolor-splash watercolor-pink"
-            style={{ animationDelay: '2.5s' }}
+            style={{ animationDelay: '1.5s' }}
           />
           {/* Watercolor splash 3 - Yellow */}
           <circle 
-            cx="80" cy="60" r="10"
+            cx="80" cy="60" r="14"
             className="watercolor-splash watercolor-yellow"
-            style={{ animationDelay: '4s' }}
+            style={{ animationDelay: '2.5s' }}
           />
           {/* Watercolor splash 4 - Green */}
           <ellipse 
-            cx="15" cy="70" rx="9" ry="12"
+            cx="15" cy="70" rx="12" ry="16"
             className="watercolor-splash watercolor-green"
-            style={{ animationDelay: '5.5s' }}
+            style={{ animationDelay: '3.5s' }}
           />
           {/* Watercolor splash 5 - Purple */}
           <circle 
-            cx="45" cy="80" r="7"
+            cx="45" cy="15" r="10"
             className="watercolor-splash watercolor-purple"
-            style={{ animationDelay: '7s' }}
+            style={{ animationDelay: '4.5s' }}
           />
           {/* Watercolor splash 6 - Orange */}
           <ellipse 
-            cx="60" cy="40" rx="11" ry="8"
+            cx="60" cy="80" rx="13" ry="10"
             className="watercolor-splash watercolor-orange"
-            style={{ animationDelay: '8.5s' }}
+            style={{ animationDelay: '5.5s' }}
+          />
+          {/* Additional splashes for more coverage */}
+          <circle 
+            cx="35" cy="50" r="8"
+            className="watercolor-splash watercolor-blue"
+            style={{ animationDelay: '6.5s' }}
+          />
+          <ellipse 
+            cx="85" cy="35" rx="9" ry="6"
+            className="watercolor-splash watercolor-green"
+            style={{ animationDelay: '7.5s' }}
           />
         </svg>
       </div>
