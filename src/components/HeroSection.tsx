@@ -13,76 +13,76 @@ const HeroSection = () => {
       }}
     >
       {/* Watercolor painting animation for specific objects */}
-      <div className="absolute inset-0 z-10">
+      <div className="absolute inset-0 z-10 mix-blend-multiply">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           
           {/* Paint the umbrella yellow */}
           <ellipse 
-            cx="25" cy="15" rx="18" ry="8"
-            className="watercolor-splash watercolor-umbrella"
-            style={{ animationDelay: '1s' }}
+            cx="25" cy="15" rx="12" ry="6"
+            className="watercolor-paint watercolor-umbrella"
+            style={{ animationDelay: '0.5s' }}
           />
           
           {/* Paint tomatoes red */}
           <circle 
-            cx="65" cy="45" r="6"
-            className="watercolor-splash watercolor-tomato"
-            style={{ animationDelay: '2s' }}
+            cx="65" cy="45" r="4"
+            className="watercolor-paint watercolor-tomato"
+            style={{ animationDelay: '1.2s' }}
           />
           <circle 
-            cx="70" cy="50" r="5"
-            className="watercolor-splash watercolor-tomato"
-            style={{ animationDelay: '2.3s' }}
+            cx="70" cy="50" r="3.5"
+            className="watercolor-paint watercolor-tomato"
+            style={{ animationDelay: '1.5s' }}
           />
           <circle 
-            cx="62" cy="52" r="4"
-            className="watercolor-splash watercolor-tomato"
-            style={{ animationDelay: '2.6s' }}
+            cx="62" cy="52" r="3"
+            className="watercolor-paint watercolor-tomato"
+            style={{ animationDelay: '1.8s' }}
           />
           
           {/* Paint leafy greens */}
           <ellipse 
-            cx="15" cy="40" rx="8" ry="12"
-            className="watercolor-splash watercolor-leafy-green"
-            style={{ animationDelay: '3.2s' }}
+            cx="15" cy="40" rx="6" ry="9"
+            className="watercolor-paint watercolor-leafy-green"
+            style={{ animationDelay: '2.5s' }}
           />
           <ellipse 
-            cx="22" cy="50" rx="6" ry="10"
-            className="watercolor-splash watercolor-leafy-green"
-            style={{ animationDelay: '3.8s' }}
+            cx="22" cy="50" rx="5" ry="8"
+            className="watercolor-paint watercolor-leafy-green"
+            style={{ animationDelay: '2.8s' }}
           />
           
           {/* Paint fruit stand oranges */}
           <circle 
-            cx="80" cy="60" r="5"
-            className="watercolor-splash watercolor-fruit-orange"
-            style={{ animationDelay: '4.5s' }}
+            cx="80" cy="60" r="4"
+            className="watercolor-paint watercolor-fruit-orange"
+            style={{ animationDelay: '3.5s' }}
           />
           <circle 
-            cx="85" cy="65" r="4"
-            className="watercolor-splash watercolor-fruit-orange"
-            style={{ animationDelay: '4.8s' }}
+            cx="85" cy="65" r="3.5"
+            className="watercolor-paint watercolor-fruit-orange"
+            style={{ animationDelay: '3.8s' }}
           />
           
           {/* Paint vegetables green */}
           <ellipse 
-            cx="45" cy="70" rx="10" ry="8"
-            className="watercolor-splash watercolor-vegetable-green"
-            style={{ animationDelay: '5.5s' }}
+            cx="45" cy="70" rx="8" ry="6"
+            className="watercolor-paint watercolor-vegetable-green"
+            style={{ animationDelay: '4.2s' }}
           />
           
           {/* Paint purple eggplants */}
           <ellipse 
-            cx="35" cy="65" rx="6" ry="9"
-            className="watercolor-splash watercolor-eggplant"
-            style={{ animationDelay: '6.2s' }}
+            cx="35" cy="65" rx="5" ry="7"
+            className="watercolor-paint watercolor-eggplant"
+            style={{ animationDelay: '4.8s' }}
           />
           
           {/* Paint market stand wood brown */}
           <rect 
-            x="10" y="75" width="80" height="8" rx="2"
-            className="watercolor-splash watercolor-wood"
-            style={{ animationDelay: '7s' }}
+            x="10" y="75" width="80" height="6" rx="2"
+            className="watercolor-paint watercolor-wood"
+            style={{ animationDelay: '5.5s' }}
           />
           
         </svg>
