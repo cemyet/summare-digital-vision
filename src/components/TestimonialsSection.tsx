@@ -2,6 +2,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -60,40 +66,52 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              {/* Stars */}
-              <div className="flex space-x-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    className="w-4 h-4 fill-summare-magenta text-summare-magenta" 
-                  />
-                ))}
-              </div>
-              
-              {/* Review Text */}
-              <p className="text-summare-gray mb-6 text-sm leading-relaxed">
-                {testimonial.text}
-              </p>
-              
-              {/* Author */}
-              <div>
-                <p className="font-semibold text-summare-navy">
-                  {testimonial.name}
-                </p>
-                <p className="text-sm text-summare-magenta">
-                  {testimonial.username}
-                </p>
-              </div>
-            </Card>
-          ))}
-        </div>
+        {/* Testimonials Carousel */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="p-6 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full">
+                  {/* Stars */}
+                  <div className="flex space-x-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className="w-4 h-4 fill-summare-magenta text-summare-magenta" 
+                      />
+                    ))}
+                  </div>
+                  
+                  {/* Review Text */}
+                  <p className="text-summare-gray mb-6 text-sm leading-relaxed">
+                    {testimonial.text}
+                  </p>
+                  
+                  {/* Author */}
+                  <div>
+                    <p className="font-semibold text-summare-navy">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-summare-magenta">
+                      {testimonial.username}
+                    </p>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
